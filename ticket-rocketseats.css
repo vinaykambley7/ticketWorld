@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.concert-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2.section-label {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius:8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stage {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.seating-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  
+    
+}
+
+.aisle-space {
+    width: 40px;
+}
+
+.seat {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 2px solid #ccc;
+
+}
+
+.seat:checked {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+/* VIP seat styling */
+.seat.vip {
+    background-color: #ffd700;
+    border-color: #f1c40f;
+}
+
+.seat.vip:checked {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.pricing-info {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.selected-seats-info {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 100%;
+    display: none;
+}
+
+.pay-now-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.seat-number {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.selected-seat-item {
+    display: flex;
+    /* Side-by-side layout */
+    justify-content: space-between;
+    /* Space between seat and price */
+    padding: 8px 0;
+    /* Spacing */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Separator line */
+}
+
+#payNowBtn {
+    background: linear-gradient(45deg, #541c06, #e74c3c, #541c06);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: auto;
+    min-width: 200px;
+}
+
+#payNowBtn:disabled {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#payNowBtn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#payNowBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected-seats-info {
+    display: none;
+    /* other styles */
+}
+h3{
+   color:white
+}
+span{
+    color:white
+}
+strong{
+    color: white;
+}

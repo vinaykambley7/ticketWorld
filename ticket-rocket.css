@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+}
+
+.concert-performers-container {
+    text-align: center;
+    padding: 20px 15px; /* Reduced padding for mobile */
+}
+
+.performers-grid {
+    display: flex; /* Changed from 'column' to flex for better control */
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 20px; /* Reduced gap for mobile */
+    margin-top: 20px;
+    align-items: center; /* Center cards horizontally */
+}
+
+.performer-card {
+    margin: 0; /* Remove the 30px margin */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px; /* Reduced padding for mobile */
+    border-radius: 10px; /* Slightly smaller radius */
+    font-size: 16px; /* Slightly smaller font */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    width: 90%; /* Take up most of screen width */
+    max-width: 350px; /* But don't get too wide */
+}
+
+h3 {
+    color: white;
+    font-size: 1.2rem; /* Adjusted heading size */
+    margin-bottom: 8px; /* Added spacing */
+}
+
+/* Tablet view (2 columns) */
+@media (min-width: 600px) {
+    .performers-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .performer-card {
+        width: calc(50% - 20px); /* Two columns with gap */
+        max-width: none;
+    }
+}
+
+/* Desktop view (original layout) */
+@media (min-width: 900px) {
+    .concert-performers-container {
+        padding: 40px 20px; /* Restore original padding */
+    }
+    
+    .performers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .performer-card {
+        margin: 0;
+        padding: 20px;
+        font-size: 18px;
+        width: auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}

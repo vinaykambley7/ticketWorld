@@ -1,0 +1,176 @@
+  body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        .concert-container {
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .screen {
+            background-color: #fff;
+            height: 20px;
+            margin: 15px auto;
+            width: 90%;
+            border-radius: 4px;
+            color: black;
+            font-weight: bold;
+            line-height: 20px;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .seating-area {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 5px 0;
+            width: 100%;
+        }
+
+        .aisle-space {
+            width: 15px;
+        }
+
+        .aisle-space2 {
+            width: 5px;
+        }
+
+        .seat {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            background-color: white;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .seat:checked {
+            background-color: #2ecc71;
+        }
+
+        .hea {
+            font-size: 1rem;
+            margin: 10px 0 5px;
+        }
+
+        .seat.balcony {
+            border: 1px solid gold;
+        }
+
+        #seat-summary {
+            margin: 20px 0;
+            font-size: 0.9rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            width: 90%;
+        }
+
+        #pay-btn {
+            background: linear-gradient(45deg, #541c06, #e74c3c);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px 0 30px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            width: 90%;
+            max-width: 250px;
+        }
+
+        #pay-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Tablet view */
+        @media (min-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            
+            .screen {
+                height: 25px;
+                line-height: 25px;
+                font-size: 0.9rem;
+            }
+            
+            .seat {
+                width: 22px;
+                height: 22px;
+                min-width: 22px;
+            }
+            
+            .aisle-space {
+                width: 20px;
+            }
+            
+            .row {
+                gap: 6px;
+            }
+        }
+
+        /* Desktop view */
+        @media (min-width: 900px) {
+            .concert-container {
+                max-width: 800px;
+            }
+            
+            .screen {
+                height: 30px;
+                line-height: 30px;
+                font-size: 1rem;
+            }
+            
+            .seat {
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+            }
+            
+            .row {
+                gap: 8px;
+                overflow-x: visible;
+            }
+            
+            #pay-btn {
+                width: auto;
+                padding: 12px 30px;
+            }
+            
+            #pay-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+        }

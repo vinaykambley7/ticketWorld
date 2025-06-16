@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.main-container {
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.logo1 {
+    height: 80px;
+    border-radius: 45px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.category-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 70px;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: transform 0.2s ease, background 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    font-style: initial;
+    background-size: cover;
+    height: 100%;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(243, 156, 18, 0.8);
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.get-startedBtn {
+    padding: 12px 28px;
+    font-size: 18px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 12px;
+    
+}
+.text{
+    color:white;
+    text-align: center;
+}
+

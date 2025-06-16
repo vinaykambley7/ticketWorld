@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Base Styles (Mobile First) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    line-height: 1.6;
+    padding: 15px;
+}
+
+.concert-performers-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: inline-block;
+    color: #f1c40f;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+.event-header {
+    margin-bottom: 20px;
+}
+
+.event-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f1c40f;
+}
+
+.event-header p {
+    font-size: 1rem;
+    color: #ecf0f1;
+}
+
+.match-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.match-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+
+.match-card p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.team {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.team img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.vs {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f1c40f;
+    margin: 10px 0;
+}
+
+.ticket-options {
+    margin-top: 25px;
+}
+
+.ticket-options h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+
+.ticket-tier {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-tier div {
+    margin-bottom: 10px;
+}
+
+.ticket-tier h3 {
+    font-size: 1.2rem;
+    color: #f1c40f;
+    margin-bottom: 5px;
+}
+
+.ticket-tier p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.book-button {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.book-button:hover {
+    background-color: #e67e22;
+}
+
+/* Tablet View (600px and up) */
+@media (min-width: 600px) {
+    .teams {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .team {
+        margin: 0 10px;
+    }
+    
+    .ticket-tier {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .book-button {
+        margin-top: 0;
+    }
+}
+
+/* Desktop View (900px and up) */
+@media (min-width: 900px) {
+    .concert-performers-container {
+        max-width: 900px;
+    }
+    
+    .event-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .match-card h2 {
+        font-size: 1.8rem;
+    }
+    
+    .team img {
+        width: 90px;
+    }
+    
+    .ticket-tier {
+        padding: 20px;
+    }
+}
+
+/* Very Small Devices (under 350px) */
+@media (max-width: 350px) {
+    .event-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .match-card h2 {
+        font-size: 1.3rem;
+    }
+    
+    .team img {
+        width: 60px;
+    }
+    
+    .book-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

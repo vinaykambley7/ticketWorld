@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    padding: 20px;
+    flex-wrap: wrap;
+    background-size:cover;
+    
+}
+
+.form-box {
+        width:500px;
+        background: rgba(255, 255, 255, 0.15); 
+        backdrop-filter: blur(10px);       
+        padding: 70px 60px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+        color: white; /* Optional: make text visible on dark background */
+
+    
+
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.para{
+    color:black;
+    
+}
+.fcolo{
+    color:darkblue;
+}

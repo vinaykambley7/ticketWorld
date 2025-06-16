@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="ticketfootball.css">
+    <title>Football Ticket Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-ticket-alt"></i> Football Ticket Booking</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Match Selection Section -->
+        <section id="match-selection" class="section active">
+            <h2><i class="fas fa-list"></i> Upcoming Matches</h2>
+            <p>Select a match to book tickets</p>
+
+            <div class="matches-container">
+                <div class="match-card" data-match-id="1">
+                    <div class="teams">
+                        <span><img src="https://via.placeholder.com/30/FF0000/FFFFFF?text=ARS" alt="Arsenal"> Arsenal</span>
+                        <span>vs</span>
+                        <span>Chelsea <img src="https://via.placeholder.com/30/0000DD/FFFFFF?text=CHE" alt="Chelsea"></span>
+                    </div>
+                    <div class="match-info">
+                        <span><i class="fas fa-trophy"></i> Premier League</span>
+                        <span><i class="far fa-calendar-alt"></i> Sat, May 15</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Emirates Stadium</span>
+                    </div>
+                </div>
+
+                <div class="match-card" data-match-id="2">
+                    <div class="teams">
+                        <span><img src="https://via.placeholder.com/30/AA0000/FFFFFF?text=FCB" alt="Barcelona"> Barcelona</span>
+                        <span>vs</span>
+                        <span>Real Madrid <img src="https://via.placeholder.com/30/FFFFFF/000000?text=RMA" alt="Real Madrid"></span>
+                    </div>
+                    <div class="match-info">
+                        <span><i class="fas fa-trophy"></i> La Liga</span>
+                        <span><i class="far fa-calendar-alt"></i> Sun, May 16</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Camp Nou</span>
+                    </div>
+                </div>
+
+                <div class="match-card" data-match-id="3">
+                    <div class="teams">
+                        <span><img src="https://via.placeholder.com/30/DC143C/FFFFFF?text=FCB" alt="Bayern"> Bayern Munich</span>
+                        <span>vs</span>
+                        <span>Dortmund <img src="https://via.placeholder.com/30/FDB913/000000?text=BVB" alt="Dortmund"></span>
+                    </div>
+                    <div class="match-info">
+                        <span><i class="fas fa-trophy"></i> Bundesliga</span>
+                        <span><i class="far fa-calendar-alt"></i> Sat, May 22</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Allianz Arena</span>
+                    </div>
+                </div>
+
+                <div class="match-card" data-match-id="4">
+                    <div class="teams">
+                        <span><img src="https://via.placeholder.com/30/002395/FFFFFF?text=PSG" alt="PSG"> PSG</span>
+                        <span>vs</span>
+                        <span>Marseille <img src="https://via.placeholder.com/30/0000FF/FFFFFF?text=OM" alt="Marseille"></span>
+                    </div>
+                    <div class="match-info">
+                        <span><i class="fas fa-trophy"></i> Ligue 1</span>
+                        <span><i class="far fa-calendar-alt"></i> Sun, May 23</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Parc des Princes</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="select-match-btn" class="btn" disabled>
+                <i class="fas fa-arrow-right"></i> Select Match & Continue
+            </button>
+        </section>
+
+        <!-- Seat Selection Section -->
+        <section id="seat-selection" class="section">
+            <h2><i class="fas fa-chair"></i> Select Your Seats</h2>
+            <p id="selected-match-info"></p>
+
+            <div class="stadium-container">
+                <div class="stadium">
+                    <div class="pitch-area">
+                        <div class="pitch"></div>
+                    </div>
+                    <div class="stands-container">
+                        <div class="stand north">
+                            <h3><i class="fas fa-arrow-up"></i> North Stand ($50)</h3>
+                            <div class="seats-grid"></div>
+                        </div>
+                        <div class="stand south">
+                            <h3><i class="fas fa-arrow-down"></i> South Stand ($40)</h3>
+                            <div class="seats-grid"></div>
+                        </div>
+                        <div class="stand east">
+                            <h3><i class="fas fa-arrow-right"></i> East Stand ($60)</h3>
+                            <div class="seats-grid"></div>
+                        </div>
+                        <div class="stand west">
+                            <h3><i class="fas fa-arrow-left"></i> West Stand ($60)</h3>
+                            <div class="seats-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-summary">
+                <h3><i class="fas fa-clipboard-list"></i> Your Selection</h3>
+                <p id="selected-seats-info">No seats selected yet</p>
+                <p id="total-price">Total: $0</p>
+                <div id="selected-seats-visual"></div>
+            </div>
+
+            <div class="navigation">
+                <button id="back-to-matches-btn" class="btn">
+                    <i class="fas fa-arrow-left"></i> Back to Matches
+                </button>
+                <button id="confirm-booking-btn" class="btn" disabled>
+                    <i class="fas fa-lock"></i> Confirm Booking
+                </button>
+            </div>
+        </section>
+
+        <!-- Payment Modal -->
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2><i class="fas fa-credit-card"></i> Payment Details</h2>
+
+                <div class="payment-tabs">
+                    <button class="tab-btn active" data-tab="upi">
+                        <i class="fas fa-mobile-alt"></i> UPI Payment
+                    </button>
+                    <button class="tab-btn" data-tab="card">
+                        <i class="far fa-credit-card"></i> Card Payment
+                    </button>
+                </div>
+
+                <div id="upi-tab" class="payment-tab-content active">
+                    <div class="form-group">
+                        <label for="upi-id"><i class="fas fa-id-card"></i> UPI ID</label>
+                        <input type="text" id="upi-id" placeholder="yourname@upi">
+                    </div>
+                    <button id="confirm-upi-payment" class="btn">
+                        <i class="fas fa-dollar-sign"></i> Pay Now
+                    </button>
+                </div>
+
+                <div id="card-tab" class="payment-tab-content">
+                    <div class="form-group">
+                        <label for="card-number"><i class="far fa-credit-card"></i> Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name"><i class="far fa-user"></i> Name on Card</label>
+                        <input type="text" id="card-name" placeholder="John Doe">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date"><i class="far fa-calendar-alt"></i> Expiry Date</label>
+                            <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv"><i class="fas fa-lock"></i> CVV</label>
+                            <input type="password" id="cvv" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                    <button id="confirm-card-payment" class="btn">
+                        <i class="fas fa-dollar-sign"></i> Pay Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Section -->
+        <section id="booking-confirmation" class="section">
+            <div class="confirmation-box">
+                <div class="confirmation-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Booking Confirmed!</h2>
+                </div>
+                <div id="confirmation-details"></div>
+                <button id="new-booking-btn" class="btn">
+                    <i class="fas fa-plus"></i> Start New Booking
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Football Ticket Booking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="ticketfootball.js"></script>
+</body>
+
+</html>

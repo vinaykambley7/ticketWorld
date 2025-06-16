@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ticketstandupseat.css"type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="concert-container container">
+        <div class="pricing-info">
+            <h1>Pricing Details</h1>
+            <p> <strong><span class="vip"></span> VIP:</strong> ₹1200</p>
+            <p> <strong><span class="middle"></span> Middle:</strong> ₹800</p>
+            <p> <strong><span class="back"></span> Back:</strong> ₹500</p>
+        </div>
+        <h1>🎤 Select Your Seats - Standups & Broadway</h1>
+         <h3 id="Stanup-name" class="movie-heading">StandUp:</h3>
+
+        <div class="stage">Stage</div>
+
+        <!-- VIP Section -->
+        <h2 class="section-label">🎟️ VIP Section</h2>
+        <div class="seating-area container">
+            <div class="row">
+
+                <input type="checkbox" class="seat vip" id="vip-01" Data-price="1200" data-seat-number="VIP-1" />
+                <input type="checkbox" class="seat vip" id="vip-02" Data-price="1200" data-seat-number="VIP-2" />
+                <input type="checkbox" class="seat vip" id="vip-03" Data-price="1200" data-seat-number="VIP-3" />
+                <input type="checkbox" class="seat vip" id="vip-04" Data-price="1200" data-seat-number="VIP-4" />
+                <input type="checkbox" class="seat vip" id="vip-05" Data-price="1200" data-seat-number="VIP-5" />
+
+                <div class="aisle-space"></div>
+                <input type="checkbox" class="seat vip" id="vip-06" Data-price="1200" data-seat-number="VIP-6" />
+                <input type="checkbox" class="seat vip" id="vip-07" Data-price="1200" data-seat-number="Vip-7" />
+                <input type="checkbox" class="seat vip" id="vip-08" Data-price="1200" data-seat-number="Vip-8" />
+                <input type="checkbox" class="seat vip" id="vip-09" Data-price="1200" data-seat-number="Vip-9" />
+                <input type="checkbox" class="seat vip" id="vip-10" Data-price="1200" data-seat-number="Vip-10" />
+
+            </div>
+            <div class="row">
+                <input type="checkbox" class="seat vip" id="vip-11" Data-price="1200" data-seat-number="Vip-11" />
+                <input type="checkbox" class="seat vip" id="vip-12" Data-price="1200" data-seat-number="Vip-12" />
+                <input type="checkbox" class="seat vip" id="vip-13" Data-price="1200" data-seat-number="Vip-13" />
+                <input type="checkbox" class="seat vip" id="vip-14" Data-price="1200" data-seat-number="Vip-14" />
+                <input type="checkbox" class="seat vip" id="vip-15" Data-price="1200" data-seat-number="Vip-15" />
+
+                <div class="aisle-space"></div>
+                <input type="checkbox" class="seat vip" id="vip-16" Data-price="1200" data-seat-number="Vip-16" />
+                <input type="checkbox" class="seat vip" id="vip-17" Data-price="1200" data-seat-number="Vip-17" />
+                <input type="checkbox" class="seat vip" id="vip-18" Data-price="1200" data-seat-number="Vip-18" />
+                <input type="checkbox" class="seat vip" id="vip-19" Data-price="1200" data-seat-number="Vip-19" />
+                <input type="checkbox" class="seat vip" id="vip-20" Data-price="1200" data-seat-number="Vip-20" />
+
+            </div>
+        </div>
+
+        <!-- Regular Seats Section -->
+        <h2 class="section-label">🎫 Regular Section</h2>
+        <div class="seating-area container">
+            <div class="row">
+                <input type="checkbox" class="seat middle" id="middle1" Data-price="800" data-seat-number="M-1" />
+                <input type="checkbox" class="seat middle" id="middle2" Data-price="800" data-seat-number="M-2" />
+                <input type="checkbox" class="seat middle" id="middle3" Data-price="800" data-seat-number="M-3" />
+                <input type="checkbox" class="seat middle" id="middle4" Data-price="800" data-seat-number="M-4" />
+                <input type="checkbox" class="seat middle" id="middle5" Data-price="800" data-seat-number="M-5" />
+                <div class="aisle-space"></div>
+                <input type="checkbox" class="seat middle" id="middle6" Data-price="800" data-seat-number="M-6" />
+                <input type="checkbox" class="seat middle" id="middle7" Data-price="800" data-seat-number="M-7" />
+                <input type="checkbox" class="seat middle" id="middle8" Data-price="800" data-seat-number="M-8" />
+                <input type="checkbox" class="seat middle" id="middle9" Data-price="800" data-seat-number="M-9" />
+                <input type="checkbox" class="seat middle" id="middle10" Data-price="800" data-seat-number="M-10" />
+            </div>
+
+            <div class="row">
+                <input type="checkbox" class="seat middle" id="middle11" Data-price="800" data-seat-number="M-11" />
+                <input type="checkbox" class="seat middle" id="middle12" Data-price="800" data-seat-number="M-12" />
+                <input type="checkbox" class="seat middle" id="middle13" Data-price="800" data-seat-number="M-13" />
+                <input type="checkbox" class="seat middle" id="middle14" Data-price="800" data-seat-number="M-14" />
+                <input type="checkbox" class="seat middle" id="middle15" Data-price="800" data-seat-number="M-15" />
+                <div class="aisle-space"></div>
+                <input type="checkbox" class="seat middle" id="middle16" Data-price="800" data-seat-number="M-16" />
+                <input type="checkbox" class="seat middle" id="middle17" Data-price="800" data-seat-number="M-17" />
+                <input type="checkbox" class="seat middle" id="middle18" Data-price="800" data-seat-number="M-18" />
+                <input type="checkbox" class="seat middle" id="middle19" Data-price="800" data-seat-number="M-19" />
+                <input type="checkbox" class="seat middle" id="middle20" Data-price="800" data-seat-number="M-20" />
+            </div>
+
+            <h2 class="section-label">🎟️ Back Section</h2>
+            <div class="seating-area">
+                <div class="row">
+                    <input type="checkbox" class="seat back" id="back1" Data-price="500" data-seat-number="B-1" />
+                    <input type="checkbox" class="seat back" id="back2" Data-price="500" data-seat-number="B-2" />
+                    <input type="checkbox" class="seat back" id="back3" Data-price="500" data-seat-number="B-3" />
+                    <input type="checkbox" class="seat back" id="back4" Data-price="500" data-seat-number="B-4" />
+                    <input type="checkbox" class="seat back" id="back5" Data-price="500" data-seat-number="B-5" />
+                    <div class="aisle-space"></div>
+                    <input type="checkbox" class="seat back" id="back6" Data-price="500" data-seat-number="B-6" />
+                    <input type="checkbox" class="seat back" id="back7" Data-price="500" data-seat-number="B-7" />
+                    <input type="checkbox" class="seat back" id="back8" Data-price="500" data-seat-number="B-8" />
+                    <input type="checkbox" class="seat back" id="back9" Data-price="500" data-seat-number="B-9" />
+                    <input type="checkbox" class="seat back" id="back10" Data-price="500" data-seat-number="B-10" />
+                </div>
+                <div class="row">
+                    <input type="checkbox" class="seat back" id="back11" Data-price="500" data-seat-number="B-11" />
+                    <input type="checkbox" class="seat back" id="back12" Data-price="500" data-seat-number="B-12" />
+                    <input type="checkbox" class="seat back" id="back13" Data-price="500" data-seat-number="B-13" />
+                    <input type="checkbox" class="seat back" id="back14" Data-price="500" data-seat-number="B-14" />
+                    <input type="checkbox" class="seat back" id="back15" Data-price="500" data-seat-number="B-15" />
+                    <div class="aisle-space"></div>
+                    <input type="checkbox" class="seat back" id="back16" Data-price="500" data-seat-number="B-16" />
+                    <input type="checkbox" class="seat back" id="back17" Data-price="500" data-seat-number="B-17" />
+                    <input type="checkbox" class="seat back" id="back18" Data-price="500" data-seat-number="B-18" />
+                    <input type="checkbox" class="seat back" id="back19" Data-price="500" data-seat-number="B-19" />
+                    <input type="checkbox" class="seat back" id="back20" Data-price="500" data-seat-number="B-20" />
+                </div>
+                <div class="row">
+                    <input type="checkbox" class="seat back" id="back21" Data-price="500" data-seat-number="B-21" />
+                    <input type="checkbox" class="seat back" id="back22" Data-price="500" data-seat-number="B-22" />
+                    <input type="checkbox" class="seat back" id="back23" Data-price="500" data-seat-number="B-23" />
+                    <input type="checkbox" class="seat back" id="back24" Data-price="500" data-seat-number="B-24" />
+                    <input type="checkbox" class="seat back" id="back25" Data-price="500" data-seat-number="B-25" />
+                    <div class="aisle-space"></div>
+                    <input type="checkbox" class="seat back" id="back26" Data-price="500" data-seat-number="B-26" />
+                    <input type="checkbox" class="seat back" id="back27" Data-price="500" data-seat-number="B-27" />
+                    <input type="checkbox" class="seat back" id="back28" Data-price="500" data-seat-number="B-28" />
+                    <input type="checkbox" class="seat back" id="back29" Data-price="500" data-seat-number="B-29" />
+                    <input type="checkbox" class="seat back" id="back30" Data-price="500" data-seat-number="B-30" />
+                </div>
+            </div>
+            </div>
+    
+            <button class="pay-now-btn" disabled id="payNowBtn">Pay Now</button>
+        </div>
+    </div>
+    <div class="selected-seats-info" id="selectedSeatsInfo">
+        <h3>Your Selection</h3>
+        <div id="selectedSeatsList"></div>
+        <div class="total-price">
+            <strong>Total: ₹<span id="totalPrice">0</span></strong>
+        </div>
+    </div>
+
+<script src="ticketStandup.js"></script>
+</body>
+
+</html>
