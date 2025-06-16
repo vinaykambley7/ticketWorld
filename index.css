@@ -20,8 +20,8 @@ body {
 }
 
 .logo {
-    max-width: 90%; /* Prevents overflow on all devices */
-    max-height: 500px; /* Fixed max height for large screens */
+    max-width: 100%; /* Prevents overflow on all devices */
+    max-height: 60vh; /* Fixed max height for large screens */
     width: auto; /* Maintains aspect ratio */
     height: auto; /* Adjusts height proportionally */
     object-fit: contain; /* Ensures image is not stretched */
@@ -43,6 +43,11 @@ body {
     margin: 12px;
     text-align: center;
 
+}
+@media (min-width:1200px) {
+    .logo{
+        max-height:400px;
+    }
 }
 @media (max-width:768px) {
     .container{
