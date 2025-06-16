@@ -18,15 +18,15 @@ body {
     box-sizing: border-box;
     max-width: 1200px;
 }
+
 .logo {
-    width: 100%;
-    padding:10px;
-    margin-bottom: 30px;
-    height:600px;
-    background-size: cover;
-    height: auto;
-    border-radius: 23px;
-    object-fit: contain;
+    max-width: 90%; /* Prevents overflow on all devices */
+    max-height: 500px; /* Fixed max height for large screens */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Adjusts height proportionally */
+    object-fit: contain; /* Ensures image is not stretched */
+    border-radius: 8px;
+    margin: 0 auto 30px;
     
 
 
@@ -50,7 +50,7 @@ body {
     }
     .logo{
         max-height: 60vh;
-       
+      
     }
     .get-started{
         padding: 10px 20px;
