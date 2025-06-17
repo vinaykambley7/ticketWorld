@@ -9,20 +9,18 @@ const ticketSummary = document.getElementById('ticketSummary');
 const totalAmount = document.getElementById('totalAmount');
 const confirmationMessage = document.getElementById('confirmationMessage');
 
-    function getMovieNameFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('Price') || "No Price Selected";
-}
+const urlParams = new URLSearchParams(window.location.search);
 
-// Display the movie name
-const priceString = getMovieNameFromURL();
-const cleanPriceString = priceString.replace(/,/g, ''); // removes commas
-const Price = parseInt(cleanPriceString, 10); // convert to number
+const Price = parseInt((urlParams.get('Price') || "1499").replace(/,/g, ''), 10);
 
-// Display the price
+const standValue = decodeURIComponent(
+  urlParams.get('Stand') || "North Stand"
+);
+
+// Update DOM elements
 document.getElementById('price-detail').textContent = `Price: ₹${Price}`;
-;
-
+document.getElementById("stand").textContent = standValue;
+document.getElementById("Standone").textContent = standValue;
 
 
 
@@ -61,7 +59,7 @@ function updateOrderSummary() {
     const subtotal = quantity * Price;
     const total = subtotal + SERVICE_FEE;
 
-    ticketSummary.textContent = `${quantity} x North Stand Ticket: ₹${subtotal}`;
+    ticketSummary.textContent = `${quantity} x ${standValue}: ₹${subtotal}`;
     totalAmount.innerHTML = `<strong>Total: ₹${total}</strong>`;
 }
 
